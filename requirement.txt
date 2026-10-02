@@ -7,3 +7,6 @@ pymupdf
 sentence-transformers
 faiss-cpu
 chromadb
+
+langchain-anthropic
+python-dotenv

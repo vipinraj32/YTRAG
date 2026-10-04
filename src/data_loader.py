@@ -18,7 +18,7 @@ def load_all_documents(data_dir: str) -> List[Any]:
 
     # Load PDF files
     for pdf_file in data_path.glob("*.pdf"):
-        loader = UnstructuredPDFLoader(str(pdf_file))
+        loader = PyPDFLoader(str(pdf_file))
         docs = loader.load()
         documents.extend(docs)
 

@@ -1,5 +1,5 @@
 from typing import List, Any
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from src.data_loader import load_all_documents
@@ -28,4 +28,3 @@ class EmbeddingPipeline:
         embeddings = self.model.encode(texts, show_progress_bar=True)
         print(f"[INFO] Embeddings shape: {embeddings.shape}")
         return embeddings
-

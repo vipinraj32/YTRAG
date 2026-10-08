@@ -5,10 +5,10 @@ from src.search import SearchEngine
 
 if __name__ == "__main__":
     # docs=load_all_documents("data/pdf")
-    store=FaisseVectorStore("faiss_store")
-    store.load()
+    # store=FaisseVectorStore("faiss_store")
+    # store.load()
     rag_search=SearchEngine()
-    query="How can I add the trainee?"
+    query="what is the main purpose of the Military College of material management?"
     summary=rag_search.search_and_summarize(query, top_k=3)
     print(summary) 
    

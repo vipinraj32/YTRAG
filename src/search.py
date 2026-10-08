@@ -17,7 +17,7 @@ class SearchEngine:
         else:
             self.vector_store.load()
             ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")  
-            self.llm = ChatAnthropic(model="claude-haiku-4-5-20251001", temperature=0.7)
+            self.llm = ChatAnthropic(model="claude-fable-5-1")
             print(f"[INFO] Loaded Anthropic LLM with API key: {ANTHROPIC_API_KEY}")
 
     def search_and_summarize(self, query_text: str, top_k: int = 3) -> str:
